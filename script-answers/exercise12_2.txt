@@ -1,0 +1,12 @@
+Script started on Thu May 12 10:03:14 2022
+Restored session: Thu May 12 10:03:00 EEST 2022
+]7;file://Jeres-MacBook-Pro.local/Users/jerenuora/Desktop/Fullstack-12.nosync/part12-containers-applications[1m[7m%[27m[1m[0m                                                                                        ]7;file://Jeres-MacBook-Pro.local/Users/jerenuora/Desktop/Fullstack-12.nosync/part12-containers-applications]2;jerenuora@Jeres-MacBook-Pro]1;..-applications]7;file://Jeres-MacBook-Pro.local/Users/jerenuora/Desktop/Fullstack-12.nosync/part12-containers-applications[0m[27m[24m[J[01;32m➜  [36mpart12-containers-applications[00m [01;34mgit:([31mmain[34m) [33m✗[00m [K[?1h=[?2004h[7mdocker run -it ubuntu bash[27m[26D[27md[27mo[27mc[27mk[27me[27mr[27m [27mr[27mu[27mn[27m [27m-[27mi[27mt[27m [27mu[27mb[27mu[27mn[27mt[27mu[27m [27mb[27ma[27ms[27mh[?1l>[?2004l
+]2;docker run -it ubuntu bash]1;docker[?2004h]0;root@2d4207e98bc7: /root@2d4207e98bc7:/# [K]0;root@2d4207e98bc7: /root@2d4207e98bc7:/# mkdir [7m/usr/src/app[27m/usr/src/app
+[?2004l[?2004h]0;root@2d4207e98bc7: /root@2d4207e98bc7:/# touch [7m/usr/src/app/index.js[27m/usr/src/app/index.js
+[?2004l[?2004h]0;root@2d4207e98bc7: /root@2d4207e98bc7:/# [Kexit
+[?2004lexit
+[1m[7m%[27m[1m[0m                                                                                        ]7;file://Jeres-MacBook-Pro.local/Users/jerenuora/Desktop/Fullstack-12.nosync/part12-containers-applications]2;jerenuora@Jeres-MacBook-Pro]1;..-applications]7;file://Jeres-MacBook-Pro.local/Users/jerenuora/Desktop/Fullstack-12.nosync/part12-containers-applications[0m[27m[24m[J[01;32m➜  [36mpart12-containers-applications[00m [01;34mgit:([31mmain[34m) [33m✗[00m [K[?1h=[?2004heexit[?1l>[?2004l
+]2;exit]1;exit
+Saving session...completed.
+
+Script done on Thu May 12 10:04:15 2022
