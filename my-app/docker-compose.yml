@@ -1,28 +1,41 @@
 services:
   server:
-    image: back-dev
+    image: back-prod
     build:
       context: ./backend
-      dockerfile: dev.Dockerfile
+      dockerfile: Dockerfile
     volumes:
       - ./backend/:/usr/src/app
       - /usr/src/app/node_modules
-
     ports:
       - 3003:3003
-    container_name: back-all
+    container_name: back-all-prod
     environment: 
       - MONGODB_URI=mongodb+srv://jere:jere@blogi0.qgvfa.mongodb.net/myFirstDatabase?retryWrites=true&w=majority
       - TEST_MONGODB_URI=mongodb+srv://jere:jere@blogi0.qgvfa.mongodb.net/myFirstDatabase?retryWrites=true&w=majority
       - SECRET="A_SeCreT_PhrAse-83497"
       - PORT=3003
+
   app:
-    image: front-dev
+    image: front-prod
     build:
       context: ./frontend
-      dockerfile: dev.Dockerfile 
+      dockerfile: Dockerfile 
     volumes:
-      - ./frontend/:/usr/src/app 
+      - ./frontend/:/usr/src/app  
     ports:
-      - 3000:3000
-    container_name: front-all 
+      - 3000:80
+    environment:
+      - REACT_APP_BACKEND_URL=http://localhost:3003
+    container_name: front-all-prod
+
+  nginx:
+    image: nginx:1.20.1
+    volumes:
+      - ./nginx.conf:/etc/nginx/nginx.conf:ro
+    ports:
+      - 8080:80
+    container_name: nginx-prod
+    depends_on:
+      - app 
+      - server
