@@ -1,0 +1,28 @@
+services:
+  server:
+    image: back-dev
+    build:
+      context: ./backend
+      dockerfile: dev.Dockerfile
+    volumes:
+      - ./backend/:/usr/src/app
+      - /usr/src/app/node_modules
+
+    ports:
+      - 3003:3003
+    container_name: back-all
+    environment: 
+      - MONGODB_URI=mongodb+srv://jere:jere@blogi0.qgvfa.mongodb.net/myFirstDatabase?retryWrites=true&w=majority
+      - TEST_MONGODB_URI=mongodb+srv://jere:jere@blogi0.qgvfa.mongodb.net/myFirstDatabase?retryWrites=true&w=majority
+      - SECRET="A_SeCreT_PhrAse-83497"
+      - PORT=3003
+  app:
+    image: front-dev
+    build:
+      context: ./frontend
+      dockerfile: dev.Dockerfile 
+    volumes:
+      - ./frontend/:/usr/src/app  # tähän? ./frontend/: jne
+    ports:
+      - 3000:3000
+    container_name: front-all 
